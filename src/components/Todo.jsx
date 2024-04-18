@@ -1,16 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import { IoIosRemoveCircle } from "react-icons/io";
 import { FaEdit } from "react-icons/fa";
 import '../App.css';
-function Todo() {
+import { FaCheck } from "react-icons/fa";
+
+function Todo({todo1, onRemoveTodo}) {
+    const {id,content}=todo1;
+    const[editable,setEditable]=useState(false);
+    const[newTodo,setNewTodo]=
+
+    const removeTodo=()=>{
+        onRemoveTodo(id);
+    }
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',border:'1px solid lightgrey', padding:'10px' }}>
+        <div style={{
+            display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',border:'1px solid lightgrey', padding:'10px',marginTop:'10px' }}>
+
             <div>
-                Ben ilk todoyum
+                {
+                    editable ? <input className="todo-input" type="text" /> : content
+                }
             </div>
             <div>
-                <IoIosRemoveCircle className="todo-icons"/>
-                <FaEdit className="todo-icons"/>
+                <IoIosRemoveCircle className="todo-icons" onClick={removeTodo}/>
+                {
+                    editable ? <FaCheck className="todo-icons"/> : <FaEdit className="todo-icons" onClick={()=> setEditable(true)}/>
+                }
+                
+                
             </div>
         </div>
     )
