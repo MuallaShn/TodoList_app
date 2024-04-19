@@ -1,13 +1,16 @@
-import React from "react"
-import Todo from "./Todo"
+import React from 'react'
+import Todo from './Todo'
 
 
-function TodoList({todos, onRemoveTodo}){
+function TodoList({todos, onRemoveTodo, onUpdateTodo}){
     return(
-        <div style={{width:'100%' , marginTop:'50px'}}>
+        <div style={{width:'100%' ,marginTop:'50px', backgroundColor: 'white',
+               
+         }}>
+            
             {
                 todos && todos.map((todo)=>(
-                    <Todo key ={todo.id} todo1= {todo} onRemoveTodo={onRemoveTodo}/>
+                    <Todo key ={todo.id} todo= {todo} onRemoveTodo={onRemoveTodo} onUpdateTodo={onUpdateTodo}/>
                 ))
             }
           

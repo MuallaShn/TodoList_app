@@ -6,15 +6,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  
+
 }
 .main{
-  width: '500px';
+  width:500px;
   display:'flex';
   flex-direction:'column';
   align-items:'center';
   justify-content:'center';
+  
 }
 .todo-create{
   display: flex;
@@ -22,18 +22,22 @@
   align-items: flex-end;
   justify-content: center;
   width: 100%;
+  
+  
 }
 .todo-input{
   width: 100%;
-  padding: 10px;
+  padding: 10px 0px;
   border: none;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid lightgray;
   outline: none;
+  
+  
 
 }
 .todo-create-button{
   margin-top: 10px;
-  padding: 10px 0px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   background-color: gold;
@@ -44,4 +48,7 @@
  font-size: 25px;
  margin-right: 7px;
  cursor: pointer;
+}
+body {
+  background-color: lightblue; /* Varsayılan arka plan rengi */
 }

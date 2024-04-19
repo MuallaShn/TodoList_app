@@ -14,7 +14,7 @@ function TodoCreate({onCreateTodo}){
         if(!newTodo)return;
         
         const request={
-            id:Math.floor(Math.random()*99999999),
+            id:Math.floor(Math.random()*99999999999),
             content:newTodo
         }
         onCreateTodo(request)
@@ -24,7 +24,7 @@ function TodoCreate({onCreateTodo}){
         <div className="todo-create">
             <input value={newTodo}
             onChange={(e)=>setNewTodo(e.target.value)}
-            className="todo-input" type="text"placeholder="Todo Giriniz" />
+            className="todo-input" type="text"placeholder=" Todo Giriniz" style={{borderRadius:'3px',paddingLeft:'8px'}}/>
             <button className="todo-create-button" onClick={createTodo}>Todo Oluştur</button>
         </div>
     )
