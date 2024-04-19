@@ -29,13 +29,21 @@ function App() {
   console.log(todos);
 
   return (
+    
+
+    
     <div className='App' >
       <div className='main' >
+      <h1 style={{textAlign: 'center',}}>Todo List</h1>
         <TodoCreate onCreateTodo={createTodo} />
         <TodoList todos={todos} onRemoveTodo={removeTodo} onUpdateTodo={updateTodo}/>
+       
       </div>
+      
 
     </div>
+    
+    
   )
 }
 
